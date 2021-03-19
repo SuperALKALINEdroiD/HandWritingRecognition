@@ -6,10 +6,11 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='draw.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='draw.js') }}"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
-    <title>Title</title>
+    <title>Canvas</title>
 </head>
 
 <body>
+<h1>Draw as you like.👇</h1>
 <form id="myForm" action="{{ url_for('result_page') }}" method="POST" enctype="multipart/form-data">
     <canvas id="canvas" , name="draw" width="600" height="400">
         <script type="text/javascript">
@@ -21,6 +22,41 @@
     <input type="hidden" id='url' name="url" value="">
     <input type="submit" id='predict' value="Predict" onclick="return save();">
 </form>
+<style>
+    h1{
+        text-align: center;
+        font-family: "Calibri Light";
+        font-size: 45px;
+        animation-name: a1;
+        animation-duration: 45s;
+    }
+    @keyframes a1 {
+        20%{color: cadetblue}
+        50%{color: grey}
+        45%{color: purple}
+        25%{color: slategray}
+        60%{color: brown}
+        55%{color: blueviolet}
+        60%{color: firebrick}
+
+    }
+    #canvas{
+        border-bottom-top-right-left: 5px ; border-color: black;
+        margin-left: 450px;
+        margin-right: 140px;
+        margin-top: 40px;
+        display: inline-block;
+    }
+    #predict{
+        border-bottom-top-right-left: 10px;
+        font-family: "Calibri Light";
+        font-size: 25px;
+        font-weight: bold;
+        background-color: #c3b8b8;
+        border-color: black;
+    }
+
+</style>
 </body>
 
 </html>
