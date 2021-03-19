@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 from flask import Flask, render_template, request, redirect, url_for
 import cv2
 import numpy as np
 import base64
-=======
-from flask import flask, render_template, request, redirect, url_for, Flask
-
->>>>>>> 1cf48c4e4f93fd4f2635d931a6cb49c85c9af872
 app = Flask(__name__)
 
 
