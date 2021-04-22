@@ -19,9 +19,9 @@ def result_page():
     image = np.asarray(bytearray(draw_decoded), dtype="uint8")
     image = cv2.imdecode(image, cv2.IMREAD_GRAYSCALE)
     # Show Image, uncomment to see image
-    # cv2.imshow('img', image)
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
+    cv2.imshow('img', image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
     return render_template("ResultPage.html", result=3)
 
 
