@@ -11,7 +11,7 @@
 <body>
 <h1>Draw as you like.👇</h1>
 <form id="myForm" action="{{ url_for('result_page') }}" method="POST" enctype="multipart/form-data">
-    <canvas id="canvas" , name="draw" width="600" height="400">
+    <canvas id="canvas" , name="draw" width="64" height="64">
         <script type="text/javascript">
             $(document).ready(function () {
                 drawCanvas();
@@ -22,31 +22,49 @@
     <input type="submit" id='predict' value="Predict" onclick="return save();">
 </form>
 <style>
-    h1{
+    h1 {
         text-align: center;
         font-family: "Calibri Light";
         font-size: 45px;
         animation-name: a1;
         animation-duration: 45s;
     }
+
     @keyframes a1 {
-        20%{color: cadetblue}
-        50%{color: grey}
-        45%{color: purple}
-        25%{color: slategray}
-        60%{color: brown}
-        55%{color: blueviolet}
-        60%{color: firebrick}
+        20% {
+            color: cadetblue
+        }
+        50% {
+            color: grey
+        }
+        45% {
+            color: purple
+        }
+        25% {
+            color: slategray
+        }
+        60% {
+            color: brown
+        }
+        55% {
+            color: blueviolet
+        }
+        60% {
+            color: firebrick
+        }
 
     }
-    #canvas{
-        border-bottom-top-right-left: 5px ; border-color: black;
+
+    #canvas {
+        border-bottom-top-right-left: 5px;
+        border-color: black;
         margin-left: 450px;
         margin-right: 140px;
         margin-top: 40px;
         display: inline-block;
     }
-    #predict{
+
+    #predict {
         border-bottom-top-right-left: 10px;
         font-family: "Calibri Light";
         font-size: 25px;
