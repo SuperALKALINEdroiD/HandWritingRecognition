@@ -8,7 +8,7 @@
     <title>Canvas</title>
 </head>
 
-<body>
+<body style="background-color: #EAF2E3">
 <h1>Draw as you like.👇</h1>
 <form id="myForm" action="{{ url_for('result_page') }}" method="POST" enctype="multipart/form-data">
     <canvas id="canvas" , name="draw" width="64" height="64">
@@ -56,15 +56,17 @@
     }
 
     #canvas {
-        border-bottom-top-right-left: 5px;
-        border-color: black;
-        margin-left: 450px;
+        margin-left: 700px;
         margin-right: 140px;
         margin-top: 40px;
         display: inline-block;
+        background-color: white;
     }
 
     #predict {
+        margin-left: 690px;
+        margin-top: 25px;
+
         border-bottom-top-right-left: 10px;
         font-family: "Calibri Light";
         font-size: 25px;
